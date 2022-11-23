@@ -1,0 +1,2441 @@
+{
+	"info": {
+		"_postman_id": "9cf5569c-4ea0-4eb3-a3b5-61274f52e712",
+		"name": "My Test Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "13774787-9cf5569c-4ea0-4eb3-a3b5-61274f52e712"
+	},
+	"item": [
+		{
+			"name": "biditems",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "Get a single available biditem resource",
+							"id": "a390f3ee-5868-4ee7-a2d4-d824cde97a93",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/biditems/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"biditems",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<integer>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "279c5fc4-b40f-4b47-bf1f-1bba845dc26b",
+									"name": "The request was successful",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/biditems/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"biditems",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<integer>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "\"<integer>\""
+								},
+								{
+									"id": "b9babe3d-6cf3-48bb-ac63-acc163e06929",
+									"name": "Request not found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/biditems/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"biditems",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<integer>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"message\": \"<string>\"\n}"
+								},
+								{
+									"id": "01ac873e-fd19-4cfe-9bb3-c24ff29df822",
+									"name": "Internal server error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/biditems/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"biditems",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<integer>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"message\": \"<string>\"\n}"
+								}
+							]
+						},
+						{
+							"name": "The process of approving a biditem to be avaiable for bid",
+							"id": "be3a606b-8cea-4a5a-9729-aabf21a5a25b",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/biditems/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"biditems",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<integer>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "3afeed16-4a57-4f99-aa6f-63637cdba034",
+									"name": "The request was successful",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/biditems/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"biditems",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<integer>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "\"<integer>\""
+								},
+								{
+									"id": "365dad71-d786-4bd0-8cc0-617929fc247d",
+									"name": "Bad request",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/biditems/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"biditems",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<integer>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"message\": \"<string>\"\n}"
+								},
+								{
+									"id": "f7d49eae-66ee-4f98-b819-2b03e5606faa",
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/biditems/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"biditems",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<integer>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"message\": \"<string>\"\n}"
+								},
+								{
+									"id": "313b7781-2be6-40d0-a167-c0d99b4d2b5b",
+									"name": "Internal server error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/biditems/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"biditems",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<integer>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"message\": \"<string>\"\n}"
+								}
+							]
+						},
+						{
+							"name": "The process of deleting a salvaged item from the system",
+							"id": "ffbe62f6-c5b4-4cd3-837e-e944740e1df1",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/biditems/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"biditems",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<integer>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "469e3e1c-70da-4203-8f4d-6eac86dd48d8",
+									"name": "The request was successful",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/biditems/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"biditems",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<integer>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "\"<integer>\""
+								},
+								{
+									"id": "0b51a27e-1723-4553-8628-702f5ef0260d",
+									"name": "Bad request",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/biditems/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"biditems",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<integer>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"message\": \"<string>\"\n}"
+								},
+								{
+									"id": "c9c312a9-2885-43a4-810c-f67cb72bca40",
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/biditems/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"biditems",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<integer>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"message\": \"<string>\"\n}"
+								},
+								{
+									"id": "cbda5afb-3cd8-4da8-b004-3d778087ba69",
+									"name": "Internal server error",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/biditems/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"biditems",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<integer>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"message\": \"<string>\"\n}"
+								}
+							]
+						},
+						{
+							"name": "The process of updating properties of a salvaged item",
+							"id": "3878455d-b5db-4242-b126-356c2be7cd33",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/biditems/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"biditems",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<integer>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "b98f7632-bd4b-4e11-a320-83a51a88b48c",
+									"name": "The request was successful",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/biditems/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"biditems",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<integer>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "\"<integer>\""
+								},
+								{
+									"id": "75c8a4b1-2669-4889-a2d8-3c0a75daa3bf",
+									"name": "Bad request",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/biditems/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"biditems",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<integer>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"message\": \"<string>\"\n}"
+								},
+								{
+									"id": "df67ec31-bd1a-4e84-a872-cb4bac996977",
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/biditems/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"biditems",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<integer>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"message\": \"<string>\"\n}"
+								},
+								{
+									"id": "1d664a4d-a99c-4f72-9c6e-9ed0483c9d69",
+									"name": "Internal server error",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/biditems/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"biditems",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<integer>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"message\": \"<string>\"\n}"
+								}
+							]
+						},
+						{
+							"name": "The process of suspending a biditem making it unavailable for bid",
+							"id": "7e26d7bf-16fa-4d6d-9e38-4ea1b2c2a82a",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/biditems/:id/suspend",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"biditems",
+										":id",
+										"suspend"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<integer>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "0f25b4aa-f371-4233-a951-878d4513de2c",
+									"name": "The request was successful",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/biditems/:id/suspend",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"biditems",
+												":id",
+												"suspend"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<integer>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "\"<integer>\""
+								},
+								{
+									"id": "33d5fbde-49fc-47cf-bb94-a40a2be122c5",
+									"name": "Bad request",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/biditems/:id/suspend",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"biditems",
+												":id",
+												"suspend"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<integer>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"message\": \"<string>\"\n}"
+								},
+								{
+									"id": "babd6473-12c8-4217-9ce4-841fdb3be2ea",
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/biditems/:id/suspend",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"biditems",
+												":id",
+												"suspend"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<integer>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"message\": \"<string>\"\n}"
+								},
+								{
+									"id": "d593ac21-8666-4405-a6d9-060769d92826",
+									"name": "Internal server error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/biditems/:id/suspend",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"biditems",
+												":id",
+												"suspend"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<integer>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"message\": \"<string>\"\n}"
+								}
+							]
+						}
+					],
+					"id": "900deda4-5d59-4866-a161-77ecfdf4490d"
+				},
+				{
+					"name": "Get a list of all available biditems resource",
+					"id": "ce42f618-a78a-4659-8c1f-8c875d639c12",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/biditems",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"biditems"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "978ef339-5552-4ff3-875f-584784bd5db7",
+							"name": "The request was successful",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/biditems",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"biditems"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "\"<integer>\""
+						},
+						{
+							"id": "1e370517-eb94-4af3-acae-546e6f0d7bd3",
+							"name": "Unexpected error",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/biditems",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"biditems"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"message\": \"<string>\"\n}"
+						},
+						{
+							"id": "c9234f84-993f-4c89-8327-7e370699a9f9",
+							"name": "Internal server error",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/biditems",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"biditems"
+									]
+								}
+							},
+							"status": "Not Implemented",
+							"code": 501,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"message\": \"<string>\"\n}"
+						}
+					]
+				},
+				{
+					"name": "The process of uploading a salvaged item into the system",
+					"id": "d2ad3241-b022-4137-96fa-18da2fd647ca",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/biditems",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"biditems"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "8c3e6f82-187e-4d1a-b0ae-7d7a055b16a8",
+							"name": "The request was successful",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/biditems",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"biditems"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "\"<integer>\""
+						},
+						{
+							"id": "a0d0b77a-0345-4290-8298-756691e71a12",
+							"name": "Bad request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/biditems",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"biditems"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"message\": \"<string>\"\n}"
+						},
+						{
+							"id": "0b6e12c1-c1e6-4f23-a6d1-bb77baee30af",
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/biditems",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"biditems"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"message\": \"<string>\"\n}"
+						},
+						{
+							"id": "7e7bc861-2aa7-4cc2-9a88-7c6cb2c4f1bd",
+							"name": "Internal server error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/biditems",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"biditems"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"message\": \"<string>\"\n}"
+						}
+					]
+				}
+			],
+			"id": "26db1155-23de-4c2a-aebd-26ae3fae65f9"
+		},
+		{
+			"name": "bids",
+			"item": [
+				{
+					"name": "Displays all bids",
+					"id": "ba74c763-b6a2-484e-920a-3ed320542c7a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/bids",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"bids"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "1682c90b-bd93-4494-b348-5c7274f1b341",
+							"name": "The request was successful",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/bids",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"bids"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"email\": \"<string>\",\n  \"id\": \"<integer>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"address\": \"<string>\"\n}"
+						},
+						{
+							"id": "7ff79230-2be0-4ab3-ace5-57d22751c7b8",
+							"name": "Bad request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/bids",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"bids"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"message\": \"<string>\"\n}"
+						},
+						{
+							"id": "0149400a-6053-4beb-929a-764528d78b57",
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/bids",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"bids"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"message\": \"<string>\"\n}"
+						},
+						{
+							"id": "0a40506e-dbae-4817-9a21-e16760c8832d",
+							"name": "Internal server error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/bids",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"bids"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"message\": \"<string>\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Submit a bid for the available biditem resource",
+					"id": "8c2a076e-d4c2-4cb4-81f1-be61b982be1e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/bids/bidrequest",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"bids",
+								"bidrequest"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "80bf84d5-bd54-4248-bf86-487280fa638d",
+							"name": "The request was successful",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/bids/bidrequest",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"bids",
+										"bidrequest"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"biditemId\": \"<integer>\",\n  \"bidValue\": \"<integer>\",\n  \"email\": \"<string>\"\n}"
+						},
+						{
+							"id": "f41f9bdf-102d-4dbd-884c-80cae6e18f63",
+							"name": "Bad request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/bids/bidrequest",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"bids",
+										"bidrequest"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"message\": \"<string>\"\n}"
+						},
+						{
+							"id": "9c86473d-9207-4c24-9851-d0163dcdc324",
+							"name": "Unauthorized request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/bids/bidrequest",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"bids",
+										"bidrequest"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"message\": \"<string>\"\n}"
+						},
+						{
+							"id": "c44ea082-698d-4c6f-8151-6aeefcf2f0bc",
+							"name": "Internal server error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/bids/bidrequest",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"bids",
+										"bidrequest"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"message\": \"<string>\"\n}"
+						}
+					]
+				}
+			],
+			"id": "2378a217-93e5-4d52-8272-5825ea47e10a"
+		},
+		{
+			"name": "bidders",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "The process of updating properties of a bidder",
+							"id": "ae0392b3-e6fa-4be4-ba1f-a504dfc72e3f",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/bidders/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"bidders",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "email,<string>,id,<integer>,firstName,<string>,lastName,<string>,address,<string>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "5802db04-1aa1-4265-919e-e58c78a884dc",
+									"name": "The request was successful",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/bidders/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"bidders",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "email,<string>,id,<integer>,firstName,<string>,lastName,<string>,address,<string>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "\"<integer>\""
+								},
+								{
+									"id": "5cf91888-2768-4435-a661-1928d98c976a",
+									"name": "Bad request",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/bidders/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"bidders",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "email,<string>,id,<integer>,firstName,<string>,lastName,<string>,address,<string>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"message\": \"<string>\"\n}"
+								},
+								{
+									"id": "b16c0f22-d4ec-4b8a-8fae-3fc2ba01ab20",
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/bidders/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"bidders",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "email,<string>,id,<integer>,firstName,<string>,lastName,<string>,address,<string>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"message\": \"<string>\"\n}"
+								},
+								{
+									"id": "a825ff6a-e6b9-454e-b846-a17739ee888e",
+									"name": "Internal server error",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/bidders/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"bidders",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "email,<string>,id,<integer>,firstName,<string>,lastName,<string>,address,<string>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"message\": \"<string>\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Get a list of bids submitted by a bidder",
+							"id": "f4606bc7-c8f5-4c8a-85e7-622a9c57c0da",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/bidders/:id/bids",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"bidders",
+										":id",
+										"bids"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "biditemId,<integer>,bidValue,<integer>,email,<string>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "69ff29fd-c8ee-4275-a1cb-315639ac782b",
+									"name": "The request was successful",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/bidders/:id/bids",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"bidders",
+												":id",
+												"bids"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "biditemId,<integer>,bidValue,<integer>,email,<string>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"biditemId\": \"<integer>\",\n  \"bidValue\": \"<integer>\",\n  \"email\": \"<string>\"\n}"
+								},
+								{
+									"id": "bc90e3c9-816f-4bf3-bb17-26dedccc28e2",
+									"name": "Bad request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/bidders/:id/bids",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"bidders",
+												":id",
+												"bids"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "biditemId,<integer>,bidValue,<integer>,email,<string>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"message\": \"<string>\"\n}"
+								},
+								{
+									"id": "deaba509-302e-4998-8a93-11f6cafcd08a",
+									"name": "Unauthorized request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/bidders/:id/bids",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"bidders",
+												":id",
+												"bids"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "biditemId,<integer>,bidValue,<integer>,email,<string>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"message\": \"<string>\"\n}"
+								},
+								{
+									"id": "3f7bc5c0-2a2e-45ce-9004-c5d38de6f802",
+									"name": "Internal server error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/bidders/:id/bids",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"bidders",
+												":id",
+												"bids"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "biditemId,<integer>,bidValue,<integer>,email,<string>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Not Implemented",
+									"code": 501,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"message\": \"<string>\"\n}"
+								}
+							]
+						},
+						{
+							"name": "The process of blacklisting a bidder from the portal",
+							"id": "f41cc781-09bc-4daf-9872-bb673c9ee29a",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/bidders/:id/blacklist",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"bidders",
+										":id",
+										"blacklist"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "email,<string>,id,<integer>,firstName,<string>,lastName,<string>,address,<string>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "f2358b08-92d9-47b8-b6c0-678783111059",
+									"name": "The request was successful",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/bidders/:id/blacklist",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"bidders",
+												":id",
+												"blacklist"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "email,<string>,id,<integer>,firstName,<string>,lastName,<string>,address,<string>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"email\": \"<string>\",\n  \"id\": \"<integer>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"address\": \"<string>\"\n}"
+								},
+								{
+									"id": "88a8823e-c6d7-4d50-a347-9bf8c576583f",
+									"name": "Bad request",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/bidders/:id/blacklist",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"bidders",
+												":id",
+												"blacklist"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "email,<string>,id,<integer>,firstName,<string>,lastName,<string>,address,<string>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"message\": \"<string>\"\n}"
+								},
+								{
+									"id": "67d4da82-a3ef-4f8a-ace2-1e500c6c048e",
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/bidders/:id/blacklist",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"bidders",
+												":id",
+												"blacklist"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "email,<string>,id,<integer>,firstName,<string>,lastName,<string>,address,<string>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"message\": \"<string>\"\n}"
+								},
+								{
+									"id": "fef9998b-2b53-4766-82d4-6cd8296ffd14",
+									"name": "Internal server error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/bidders/:id/blacklist",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"bidders",
+												":id",
+												"blacklist"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "email,<string>,id,<integer>,firstName,<string>,lastName,<string>,address,<string>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"message\": \"<string>\"\n}"
+								}
+							]
+						}
+					],
+					"id": "90ac2e06-c713-4b48-b176-55d369ca23b6"
+				},
+				{
+					"name": "The process of creating a new bidder on salvage portal",
+					"id": "a0089c82-b2c4-480b-a0a3-725b184962f4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/bidders",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"bidders"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "7e456a81-2200-48de-bab3-7b35896ae4bc",
+							"name": "The request was successful",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/bidders",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"bidders"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"email\": \"<string>\",\n  \"id\": \"<integer>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"address\": \"<string>\"\n}"
+						},
+						{
+							"id": "9808e2f0-ebb1-447b-8a21-79401eb502e5",
+							"name": "Bad request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/bidders",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"bidders"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"message\": \"<string>\"\n}"
+						},
+						{
+							"id": "29fd3b4a-321a-4790-b30b-5442abd36218",
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/bidders",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"bidders"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"message\": \"<string>\"\n}"
+						},
+						{
+							"id": "7bc29128-aac3-4cee-bf33-9fb7de4194fc",
+							"name": "Internal server error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/bidders",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"bidders"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"message\": \"<string>\"\n}"
+						}
+					]
+				}
+			],
+			"id": "e43633cc-8d5c-40bb-927b-9785baf99450"
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "<Bearer Token>",
+				"type": "string"
+			}
+		]
+	},
+	"variable": [
+		{
+			"id": "564b648b-cde3-48fa-b29b-36d1d74fccaf",
+			"key": "baseUrl",
+			"value": "localhost:7198",
+			"type": "string"
+		}
+	]
+}

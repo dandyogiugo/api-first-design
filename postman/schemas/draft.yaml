@@ -1,0 +1,508 @@
+openapi: "3.0.0"
+info:
+    version: "1.0.0"
+    title: Draft Salvage Api Spacification v1
+servers:
+    - url: localhost:7198
+paths:
+    /biditems:
+        get:
+            summary: Get a list of all available biditems resource
+            responses:
+                "200":
+                    description: The request was successful
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/BiditemId"
+                500:
+                    description: Unexpected error
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Error"
+                501:
+                    description: Internal server error
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Error"
+        post:
+            summary: The process of uploading a salvaged item into the system
+            responses:
+                "200":
+                    description: The request was successful
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/BiditemId"
+                "400":
+                    description: Bad request
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Error"
+                "401":
+                    description: Unauthorized
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Error"
+                "500":
+                    description: Internal server error
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Error"
+    /biditems/{id}:
+        get:
+            summary: Get a single available biditem resource
+            parameters:
+                - in: path
+                  name: id
+                  schema:
+                      $ref: "#/components/schemas/BiditemId"
+                  required: true
+
+            responses:
+                "200":
+                    description: The request was successful
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/BiditemId"
+                "404":
+                    description: Request not found
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Error"
+                "500":
+                    description: Internal server error
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Error"
+        post:
+            summary: The process of approving a biditem to be avaiable for bid
+            parameters:
+                - in: path
+                  name: id
+                  schema:
+                      $ref: "#/components/schemas/BiditemId"
+                  required: true
+            responses:
+                "200":
+                    description: The request was successful
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/BiditemId"
+                "400":
+                    description: Bad request
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Error"
+                "401":
+                    description: Unauthorized
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Error"
+                "500":
+                    description: Internal server error
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Error"
+        delete:
+            summary: The process of deleting a salvaged item from the system
+            parameters:
+                - in: path
+                  name: id
+                  schema:
+                      $ref: "#/components/schemas/BiditemId"
+                  required: true
+            responses:
+                "200":
+                    description: The request was successful
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/BiditemId"
+                "400":
+                    description: Bad request
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Error"
+                "401":
+                    description: Unauthorized
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Error"
+                "500":
+                    description: Internal server error
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Error"
+        patch:
+            summary: The process of updating properties of a salvaged item
+            parameters:
+                - in: path
+                  name: id
+                  schema:
+                      $ref: "#/components/schemas/BiditemId"
+                  required: true
+            responses:
+                "200":
+                    description: The request was successful
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/BiditemId"
+                "400":
+                    description: Bad request
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Error"
+                "401":
+                    description: Unauthorized
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Error"
+                "500":
+                    description: Internal server error
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Error"
+    /biditems/{id}/suspend:
+        post:
+            summary: The process of suspending a biditem making it unavailable for bid
+            parameters:
+                - in: path
+                  name: id
+                  schema:
+                      $ref: "#/components/schemas/BiditemId"
+                  required: true
+            responses:
+                "200":
+                    description: The request was successful
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/BiditemId"
+                "400":
+                    description: Bad request
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Error"
+                "401":
+                    description: Unauthorized
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Error"
+                "500":
+                    description: Internal server error
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Error"
+    /bids:
+        post:
+            summary: Displays all bids
+            responses:
+                "200":
+                    description: The request was successful
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Bidder"
+                "400":
+                    description: Bad request
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Error"
+                "401":
+                    description: Unauthorized
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Error"
+                "500":
+                    description: Internal server error
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Error"
+    /bids/bidrequest:
+        post:
+            summary: Submit a bid for the available biditem resource
+            responses:
+                "200":
+                    description: The request was successful
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Bid"
+                "400":
+                    description: Bad request
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Error"
+                "401":
+                    description: Unauthorized request
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Error"
+                "500":
+                    description: Internal server error
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Error"
+    /bidders:
+        post:
+            summary: The process of creating a new bidder on salvage portal
+            responses:
+                "200":
+                    description: The request was successful
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Bidder"
+                "400":
+                    description: Bad request
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Error"
+                "401":
+                    description: Unauthorized
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Error"
+                "500":
+                    description: Internal server error
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Error"
+    /bidders/{id}:
+        patch:
+            summary: The process of updating properties of a bidder
+            parameters:
+                - in: path
+                  name: id
+                  schema:
+                      $ref: "#/components/schemas/Bidder"
+                  required: true
+            responses:
+                "200":
+                    description: The request was successful
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/BiditemId"
+                "400":
+                    description: Bad request
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Error"
+                "401":
+                    description: Unauthorized
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Error"
+                "500":
+                    description: Internal server error
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Error"
+    /bidders/{id}/bids:
+        get:
+            summary: Get a list of bids submitted by a bidder
+            parameters:
+                - in: path
+                  name: id
+                  schema:
+                      $ref: "#/components/schemas/Bid"
+                  required: true
+            responses:
+                "200":
+                    description: The request was successful
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Bid"
+                "400":
+                    description: Bad request
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Error"
+                "401":
+                    description: Unauthorized request
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Error"
+                "501":
+                    description: Internal server error
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Error"
+    /bidders/{id}/blacklist:
+        post:
+            summary: The process of blacklisting a bidder from the portal
+            parameters:
+                - in: path
+                  name: id
+                  schema:
+                      $ref: "#/components/schemas/Bidder"
+                  required: true
+            responses:
+                "200":
+                    description: The request was successful
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Bidder"
+                "400":
+                    description: Bad request
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Error"
+                "401":
+                    description: Unauthorized
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Error"
+                "500":
+                    description: Internal server error
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Error"
+components:
+    schemas:
+        BiditemId:
+            description: The unique identifier of a biditem
+            type: integer
+            example: 1
+        Biditem:
+            type: object
+            required:
+                - id
+                - title
+                - images
+            properties:
+                id:
+                    $ref: "#/components/schemas/BiditemId"
+                title:
+                    type: string
+                    example: "Salvage Title"
+                description:
+                    type: string
+                    example: "Short description about the Salvage Item"
+                brand:
+                    type: string
+                    example: "Brand of the Salvage Item if any else R/N"
+                model:
+                    type: string
+                    example: "Model Of the Salvage Item if any else R/N"
+                closeDate:
+                    type: string
+                    example: "12/12/2023"
+                regNo:
+                    type: string
+                    example: "Registration Number of the Salvage Item if any else R/N"
+                contactPerson:
+                    type: string
+                    example: "Contact of who to reach for the Salvage Item"
+                images:
+                    $ref: "#/components/schemas/Image"
+        Image:
+            description: An object of an image
+            type: object
+            required:
+                - biditemId
+                - imageTag
+                - imageName
+            properties:
+                id:
+                    type: integer
+                biditemId:
+                    $ref: "#/components/schemas/BiditemId"
+                imageTag:
+                    type: string
+                imageName:
+                    type: string
+        Bid:
+            description: An intent to buy an avaiable biditem
+            type: object
+            required:
+                - biditemId
+                - bidValue
+                - email
+            properties:
+                biditemId:
+                    $ref: "#/components/schemas/BiditemId"
+                bidValue:
+                    type: integer
+                email:
+                    type: string
+        Bidder:
+            description: A registered customer with a valid email address who can submit a bidrequest for an avaiable biditem
+            type: object
+            required:
+                - email
+            properties:
+                id:
+                    type: integer
+                email:
+                    type: string
+                firstName:
+                    type: string
+                lastName:
+                    type: string
+                address:
+                    type: string
+        Error:
+            type: object
+            required:
+                - message
+            properties:
+                message:
+                    description: A human readable error message
+                    type: string
+    securitySchemes:
+        #ApiKey:
+        #type: apiKey
+        #in: header
+        #name: X-Access-token
+        bearerAuth:
+            type: http
+            scheme: bearer
+            bearerFormat: JWT
+security:
+    #- ApiKey: []
+    - bearerAuth: []
