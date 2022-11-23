@@ -7,7 +7,7 @@ servers:
 paths:
     /biditems:
         get:
-            summary: Get a list of all available biditems resource
+            summary: Get a list of BidItems resource
             responses:
                 "200":
                     description: The request was successful
